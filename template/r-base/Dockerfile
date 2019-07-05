@@ -1,4 +1,4 @@
-FROM bde/spark-base-arrow:2.4.3-hadoop2.7
+FROM localhost:5000/bde/spark-base-arrow:2.4.3-hadoop2.7
 
 MAINTAINER Artem Klevtsov a.a.klevtsov@gmail.com
 
@@ -8,7 +8,6 @@ ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 
 # R runtime dependencies
-RUN apk del openssl-dev
 RUN apk --no-cache add \
         gcc \
         gfortran \
@@ -26,6 +25,7 @@ RUN apk --no-cache add \
         zip \
         file \
         coreutils \
+        libxml2-dev \
         bash && \
 # R build dependencies
     apk --no-cache add --virtual build-deps \
