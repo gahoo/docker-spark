@@ -36,7 +36,6 @@ RUN apk update && \
         libnsl-dev \
         musl-dev \
         ninja \
-        #openssl-dev \
         libressl-dev \
         wget \
         zlib-dev
