@@ -1,0 +1,6 @@
+options(repos=c(CRAN='https://mirrors.tuna.tsinghua.edu.cn/CRAN'))
+install.packages('remotes')
+remotes::install_github("apache/arrow", subdir = "r", ref = "apache-arrow-0.14.0")
+library(arrow)
+install.packages('sparklyr')
+library(sparklyr)
